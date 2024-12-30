@@ -26,7 +26,7 @@ def list_bucket_content(subpath):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-
+exit
 ### 1. Launch an EC2 Instance
 - Create an EC2 instance with a suitable AMI (e.g., Ubuntu 20.04).
 - Ensure it has an appropriate security group with necessary inbound and outbound rules.
