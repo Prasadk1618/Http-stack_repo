@@ -38,5 +38,19 @@ if __name__ == '__main__':
 ### 3. Configure AWS CLI
 - Log in to the EC2 instance via SSH.
 - Run the following command to configure AWS CLI:
-  ```bash
-  a
+  
+### 4. Create S3 bucket And give Policy
+```bash{
+    "Version": "2012-10-17",
+    "Id": "Policy1735567338835",
+    "Statement": [
+        {
+            "Sid": "Stmt1735567337153",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::taskwalibucket/*"
+        }
+    ]
+}
+```
