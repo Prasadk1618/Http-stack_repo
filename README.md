@@ -30,6 +30,11 @@ if __name__ == '__main__':
 ### 1. Launch an EC2 Instance
 - Create an EC2 instance with a suitable AMI (e.g., Ubuntu 20.04).
 - Ensure it has an appropriate security group with necessary inbound and outbound rules.
+ ```bash
+install sudo apt install python3-pip -y
+ pip install flask boto3
+ create s3-app.py file
+```
 
 ### 2. Attach an IAM Role to EC2
 - Create an IAM Role with the *AmazonS3FullAccess* policy.
