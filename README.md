@@ -38,6 +38,9 @@ if __name__ == '__main__':
 ### 3. Configure AWS CLI
 - Log in to the EC2 instance via SSH.
 - Run the following command to configure AWS CLI:
+  ```bash
+  aws configure
+``
   
 ### 4. Create S3 bucket And give Policy
 ```bash{
