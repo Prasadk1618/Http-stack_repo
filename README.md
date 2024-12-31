@@ -57,4 +57,3 @@ if __name__ == '__main__':
     ]
 }
 ```
-![Project Logo](.C:\Users\prasa\OneDrive\Pictures\Screenshots)
