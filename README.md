@@ -57,3 +57,36 @@ if __name__ == '__main__':
     ]
 }
 ```
+### Some Activity
+```bash
+ ec2 launch
+ create role with s3fullaccess policy and attach to the ec2
+ aws configure
+ create bucket and file structure in bucket
+ install sudo apt install python3-pip -y
+ pip install flask boto3
+ create s3-app.py file
+ Run the Service >>  python3 app.py
+ Add an inbound rule to allow traffic on port 5000
+ Test the Service:
+curl http://<EC2_PUBLIC_IP>:5000/list-bucket-content
+curl http://<EC2_PUBLIC_IP>:5000/list-bucket-content/dir1
+Set Up as a Systemd Service
+sudo vi /etc/systemd/system/list-bucket.service
+
+Description=S3 Bucket HTTP Service
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu
+ExecStart=/usr/bin/python3 /home/ubuntu/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+Enable and Start the Service
+sudo systemctl daemon-reload
+sudo systemctl enable list-bucket.service
+sudo systemctl start list-bucket.service
+```
